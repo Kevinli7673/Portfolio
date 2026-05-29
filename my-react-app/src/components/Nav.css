@@ -1,6 +1,6 @@
 .Nav {
     margin: 0 0;
-    padding: 0 0;
+    padding: 0 40px 0 0;
     background-color: #F6F3EE;
     display: flex;
     justify-content: space-between;
@@ -15,7 +15,9 @@
     align-items: center;
     list-style: none;
     gap: 25px;
-    font-size: 2em;
+    font-size: clamp(1rem, calc(1vw + .8rem), 2rem);
+    margin: 0;
+    padding: 0;
 }
 
 .Nav img {
@@ -32,13 +34,16 @@
     padding-right: 10px;
 }
 
-.Links {
-    margin-right: 35px;
+.name {
+    font-size: clamp(1rem, calc(2vw + .5rem), 4rem);
+    margin: 0;
+    margin-left: 50px;
+    flex: 1;
 }
 
-.name {
-    font-size: 3em;
-    margin-left: 60px;
+.Nav .Links {
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .linkedin {
