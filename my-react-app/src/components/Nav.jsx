@@ -10,9 +10,9 @@ function Nav() {
             <nav className="Nav">
                 <p className="name">Kevin Li</p>
                 <ul className="mainNav">
-                    <li><a>Home</a></li>
+                    <li><a href="#HeroPage">Home</a></li>
                     <li><a>Experience</a></li>
-                    <li><a>Projects</a></li>
+                    <li><a href="#Projects">Projects</a></li>
                 </ul>
                 <ul className="Links">
                     <li><a href="https://www.linkedin.com/in/kevin-li7673/" target="_blank"><img className="linkedin" src={Linkedin} alt="Linkedin logo"/></a></li>
