@@ -4,7 +4,7 @@ import "./Hero.css"
 function  Hero() {
     return(
         <>
-            <div className="Hero" id="HeroPage">
+            <div className="Hero">
                 <div className="leftSide">
                     <div className="heroQuote">
                         <p>
