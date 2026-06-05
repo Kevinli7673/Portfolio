@@ -1,6 +1,6 @@
 import "./Projects.css"
 
-function ProjectsCard({name, role, year, description, tags}) {
+function ProjectsCard({name = "Projects", role = "Developer", year = new Date().getFullYear(), description = "Place-Holder", tags = []}) {
     return(
         <div className="ProjectCard">
             <div className="Name">
