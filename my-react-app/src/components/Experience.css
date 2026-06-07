@@ -1,4 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap');
+
 .experience {
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
     background-color: #F6F3EE;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+    align-items: center;
+}
+
+.experience p{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.experience hr {
+    margin: 4% 0;
+    width: 70%;
+    border: none;                                                                               
+    border-top: 1px solid rgb(0 0 0 / 75%);
+}
+
+.Title {
+    font-size: clamp(3rem, calc(4.5rem + 2vh), 7rem);
+    font-family: "Source Serif 4", serif;
+}
+
+.caption {
+    font-size: clamp(1.2rem, calc(1rem + 1.3vh), 3rem);
+    margin-top: -2%;
+    color: rgb(0 0 0 / 75%);
+    font-family: "Source Serif 4", serif;
+
+}
+
+.Experience-card {
+    width: 70%;
+    margin-top: 3%;
+    position: relative;
+    display: flex;
+}
+
+.experience .Role {
+    color: rgb(0, 0, 0);
+    font-size: clamp(1rem, calc(2rem + 1vh), 4rem);
+}
+
+.experience .Company {
+    color: rgb(0, 0, 0, 75%);
+    font-size: clamp(.7rem, calc(1rem + .8vh), 2.5rem);
+    font-family: "Lora", serif;
+}
+
+.experience .Date {
+    color: rgb(0, 0, 0, 75%);
+    font-family: "JetBrains Mono", monospace;
+    position: absolute;
+    top: -.8%;
+    right: 0;
+}
+
+.experience .Location {
+    font-family: "JetBrains Mono", monospace;
+    color: rgb(0, 0, 0, 75%);
+}
+
+.experience .Left {
+    margin-right: 6%;
+}
+
+.experience img {
+    max-width: 250px;
+    max-height: 250px;
+    margin-top: -20%;
+    border-radius: 20px;
+}
+
+.experience .Bottom_hr {
+    margin-top: 2%;
+    margin-bottom: 0;
+    padding-bottom: 5%;
+}
+
+.experience .Summary {
+    font-size: clamp(.5rem, calc(1rem + .5vh), 2rem);
+    max-width: 70%;
+    margin-bottom: -2%;
+}
+
+.experience .details {
+    margin-top: -2.5%;
+    padding-left: 1.5em;
+    text-indent: -1.25em;
+    font-family: "Geist", "JetBrains Mono";
+    max-width: 75%;
+}
+
+.experience .tags {
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    color: rgb(0 0 0 / 85%);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: clamp(0.8rem, calc(0.5vw + 0.5rem), 2rem);
+    font-family: "JetBrains Mono", monospace;
+}
+
+.experience .Arrow {
+    color: #C5755C;
 }
