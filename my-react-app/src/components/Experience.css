@@ -15,7 +15,7 @@
 }
 
 .experience hr {
-    margin: 4% 0;
+    margin-bottom: 5%;
     width: 70%;
     border: none;                                                                               
     border-top: 1px solid rgb(0 0 0 / 75%);
@@ -58,6 +58,7 @@
     position: absolute;
     top: -.8%;
     right: 0;
+    font-size: clamp(.1rem, calc(.5vw + 0.5rem), 1rem);
 }
 
 .experience .Location {
