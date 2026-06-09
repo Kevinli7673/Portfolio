@@ -1,7 +1,20 @@
+import { useState, useEffect } from "react";
 import Campfire from "../assets/campfire.gif"
 import "./Hero.css"
 
 function  Hero() {
+
+    const words =["Hello!", "Fav games: Souls likes", "CS Major", "Book Reader"];
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex( c => (c+1) % words.length);
+        }, 2800);
+    
+        return () => clearInterval(interval);
+    }, []);
+
     return(
         <>
             <div className="Hero">
@@ -23,7 +36,7 @@ function  Hero() {
                 </div>
                 <div className="rightSide">
                     <img src={Campfire} alt="Campfire"/>
-                    <p>Rotating text...</p>
+                    <p className="alt-Text">{words[index]}</p>
                 </div>
             </div>
             <hr/>

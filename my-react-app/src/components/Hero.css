@@ -33,7 +33,7 @@
     align-items: center;
     margin-top: -8%;
     gap: 40px;
-    font-size: clamp(1rem, calc(1vw + .3rem), 5rem);
+    font-size: clamp(1rem, calc(1vw + .5rem), 3rem);
 }
 
 img {
@@ -42,3 +42,4 @@ img {
     max-width: 600px;
     max-height: 600px;
 }
+
