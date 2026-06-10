@@ -6,7 +6,7 @@ import "./Hero.css"
 function  Hero() {
     const location = useLocation()
 
-    const words =["Hi, I'm Kevin", "Fav games: Souls likes", "CS Major", "Rising Sophmore"];
+    const words =["Hi, I'm Kevin", "Fav games: Souls likes", "CS Major", "Rising Sophmore at UCF"];
     const [index, setIndex] = useState(0);
     const [isFading, setIsFading] = useState(false);
 
