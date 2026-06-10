@@ -1,19 +1,33 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router";
 import Campfire from "../assets/campfire.gif"
 import "./Hero.css"
 
 function  Hero() {
+    const location = useLocation()
 
-    const words =["Hello!", "Fav games: Souls likes", "CS Major", "Book Reader"];
+    const words =["Hi, I'm Kevin", "Fav games: Souls likes", "CS Major", "Rising Sophmore"];
     const [index, setIndex] = useState(0);
+    const [isFading, setIsFading] = useState(false);
+
 
     useEffect(() => {
         const interval = setInterval(() => {
+            setIsFading(true);
+            setTimeout(() => {
             setIndex( c => (c+1) % words.length);
+            setIsFading(false);
+            }, 800)
         }, 2800);
-    
+
         return () => clearInterval(interval);
     }, []);
+
+    useEffect(() => {
+        if (location.state?.scrollTo) {
+            document.getElementById(location.state.scrollTo)?.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [location.state]);
 
     return(
         <>
@@ -36,7 +50,7 @@ function  Hero() {
                 </div>
                 <div className="rightSide">
                     <img src={Campfire} alt="Campfire"/>
-                    <p className="alt-Text">{words[index]}</p>
+                    <p className={`alt-Text ${isFading ? "fade-out" : "fade-in"}`}>{words[index]}</p>
                 </div>
             </div>
             <hr/>

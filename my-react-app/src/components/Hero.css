@@ -43,3 +43,14 @@ img {
     max-height: 600px;
 }
 
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.alt-Text {
+    transition: opacity 0.8s;
+}

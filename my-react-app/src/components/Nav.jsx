@@ -18,15 +18,24 @@ function Nav() {
         }
     }
 
+    const handleProject = (e) => {
+        e.preventDefault()
+        if (location.pathname === '/') {
+            document.getElementById("Projects").scrollIntoView({behavior: 'smooth'});
+        } else {
+            navigate('/', { state: { scrollTo: 'Projects' }})
+        }
+    }
+
     return (
         <>
             <div className="Navbar">
                 <nav className="Nav">
-                    <p className="name">Kevin Li</p>
+                    <a className="name" href="/" onClick={handleHome}>Kevin Li</a>
                     <ul className="mainNav">
                         <li><a href="/" onClick={handleHome}>Home</a></li>
                         <li><Link to="/experience">Experience</Link></li>
-                        <li><a href="#Projects">Projects</a></li>
+                        <li><a href="#Projects" onClick={handleProject}>Projects</a></li>
                     </ul>
                     <ul className="Links">
                         <li><a href="https://www.linkedin.com/in/kevin-li7673/" target="_blank"><img className="linkedin" src={Linkedin} alt="Linkedin logo"/></a></li>
