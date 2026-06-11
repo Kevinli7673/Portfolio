@@ -53,10 +53,10 @@
 
 .tag {
     border: 1px solid #888;
-    color: rgb(0 0 0 / 50%);
+    color: rgb(0 0 0 / 85%);
     padding: 4px 12px;
     border-radius: 999px;
-    font-size: clamp(0.8rem, calc(0.5vw + 0.5rem), 2rem);
+    font-size: clamp(0.5rem, calc(0.5vw + 0.5rem), 2rem);
     font-family: "JetBrains Mono", monospace;
 }
 
@@ -80,7 +80,26 @@
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
-        min-height: 110vw;
+        min-height: 100vw;
     }
 
+    .Name {
+        padding: 4% 0;
+    }
+    
+    .Role {
+        padding-bottom: 5%;
+    }
+
+    .Description {
+        padding-bottom: 5%;
+    }
+
+    .tag {
+        margin-bottom: 5%;
+    }
+
+    .Hover_caption {
+        top: 2%;
+    }
 }

@@ -13,9 +13,9 @@ function ExperienceCard({Image, Role, Company, Date, Location, Summary, Details,
                     </div>
                 </div>
                 <div className='Middle'>
-                    <div className='Role'>
-                        <span>{Role}</span>
-                    </div>
+                        <div className='Role'>
+                            <span>{Role}</span>
+                        </div>
                     <div className='Company'>
                         <span>{Company}</span>
                     </div>
@@ -55,7 +55,7 @@ function Experience() {
                 "Engineered a dual-perspective system (macro table view and first-person chamber view) with seamless scaling and real-time switching across 4+ radiation sources.",
                 "Delivered an open-source AR/VR educational prototype with a [4]-person team for ORAU to demonstrate radiation physics interactively."
                 ],
-            Tags: ["Unity", "Virtual Reality", "C#"]
+            Tags: ["Unity Engine", "Virtual Reality", "C#"]
         },
         {
             Image: GPK,

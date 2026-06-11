@@ -22,12 +22,12 @@
 }
 
 .Title {
-    font-size: clamp(3rem, calc(4.5rem + 2vh), 7rem);
+    font-size: clamp(1rem, calc(5vh + 1.5rem), 7rem);
     font-family: "Source Serif 4", serif;
 }
 
 .caption {
-    font-size: clamp(1.2rem, calc(1rem + 1.3vh), 3rem);
+    font-size: clamp(.5rem, calc(.5rem + 1.8vh), 3rem);
     margin-top: -2%;
     color: rgb(0 0 0 / 75%);
     font-family: "Source Serif 4", serif;
@@ -131,5 +131,32 @@
 
     .experience .Date {
         top: -5%;
+    }
+
+    .experience .Role {
+        position: absolute;
+        top: 1%;
+        right: 0%;
+        width: 80%;
+        font-size: clamp(.5rem, calc(2vh + .5rem), 3rem);
+    }
+
+    .experience .long-title {
+        top: -.5%;
+    }
+
+    .Middle {
+        padding-top: 18%;
+        margin-left: -20%;
+    }
+    
+    .tags {
+        display: flex;
+        align-items: center;
+    }
+
+    .experience .Company {
+        font-size: clamp(.3rem, calc(.5rem + .8vh), 2.5rem);
+        max-width: 80%;
     }
 }
