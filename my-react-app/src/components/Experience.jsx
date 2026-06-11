@@ -47,7 +47,7 @@ function Experience() {
             Image: IST,
             Role: "Software Engineer Intern",
             Company: "UCF - Institute For Simulation & Training",
-            Date: "June 2026 - Present",
+            Date: "May 2026 - Present",
             Location: "Orlando, Fl",
             Summary: "Developing a real-time Unity VR simulator that visualizes ionizing radiation through cloud-chamber particle tracks.",
             Details: [

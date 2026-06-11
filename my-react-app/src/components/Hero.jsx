@@ -42,7 +42,7 @@ function  Hero() {
                     </div>
                     <div className="Caption">
                         <p>
-                            Hi, I'm Kevin. This is the corner of the internet where I <br/>
+                            Hi, I'm Kevin. This is the corner of the internet where I <br className="br1"/>
                             share my projects, experience, and other exciting stuff. <br/>
                             Stay here as long as you like.
                         </p>

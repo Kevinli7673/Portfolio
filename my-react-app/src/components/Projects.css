@@ -22,7 +22,7 @@
 }
 
 .Name {
-    font-size: clamp(2rem, calc(5vh + 1rem), 10rem);
+    font-size: clamp(1rem, calc(3vw + .7rem), 10rem);
     font-family: "Lora", serif;
     margin-top: -2%;
 }
@@ -75,4 +75,12 @@
     position: absolute;
     top: 4%;
     right: 4%;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        min-height: 110vw;
+    }
+
 }
