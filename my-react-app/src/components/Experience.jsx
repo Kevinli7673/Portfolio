@@ -3,7 +3,7 @@ import IST from '../assets/IST.jpg'
 import KH from '../assets/KH-logo.png'
 import GPK from '../assets/gpk-logo.png'
 
-function ExperienceCard({Image, Role, Company, Date, Location, Summary, Details, Tags}) {
+function ExperienceCard({Image, Role, RoleClass, Company, Date, Location, Summary, Details, Tags}) {
     return (
         <>
             <div className='Experience-card'>
@@ -13,7 +13,7 @@ function ExperienceCard({Image, Role, Company, Date, Location, Summary, Details,
                     </div>
                 </div>
                 <div className='Middle'>
-                        <div className='Role'>
+                        <div className={`Role ${RoleClass ?? ''}`}>
                             <span>{Role}</span>
                         </div>
                     <div className='Company'>
@@ -46,6 +46,7 @@ function Experience() {
         {
             Image: IST,
             Role: "Software Engineer Intern",
+            RoleClass: "long-title",
             Company: "UCF - Institute For Simulation & Training",
             Date: "May 2026 - Present",
             Location: "Orlando, Fl",

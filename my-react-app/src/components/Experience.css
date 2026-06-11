@@ -142,7 +142,7 @@
     }
 
     .experience .long-title {
-        top: -.5%;
+        top: -1%;
     }
 
     .Middle {
@@ -158,5 +158,9 @@
     .experience .Company {
         font-size: clamp(.3rem, calc(.5rem + .8vh), 2.5rem);
         max-width: 80%;
+    }
+
+    .experience .Summary {
+        max-width: 100%;
     }
 }
