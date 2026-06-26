@@ -31,9 +31,9 @@ function ExperienceCard({Image, Role, RoleClass, Company, Date, Location, Summar
                     <div className='Tags'>
                         {Tags.map(tag => (<span key={tag} className='tags'>{tag}</span>))}
                     </div>
-                    <div className='Date'>
-                        <span>{Date}</span>
-                    </div>
+                </div>
+                <div className='Date'>
+                    <span>{Date}</span>
                 </div>
             </div>
                 <hr className='Bottom_hr' />

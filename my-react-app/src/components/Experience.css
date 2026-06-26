@@ -41,6 +41,27 @@
     display: flex;
 }
 
+.Middle {
+    transition: background-color 0.4s ease-out;
+    padding-bottom: 1%;
+    padding-top: 4%;
+    margin-top: -2%;
+    padding-left: 2%;
+    border-radius: 15px;
+}
+
+.Middle:hover {
+    background-color: #d8d4c9;
+}
+
+.Middle > * {
+    transition: transform 0.4s ease-out;
+}
+
+.Middle:hover > * {
+    transform: translateX(1.5%);
+}
+
 .experience .Role {
     color: rgb(0, 0, 0);
     font-size: clamp(1rem, calc(2rem + 1vh), 4rem);
@@ -57,8 +78,13 @@
     font-family: "JetBrains Mono", monospace;
     position: absolute;
     top: -.8%;
-    right: 0;
+    right: 1%;
     font-size: clamp(.1rem, calc(.5vw + 0.5rem), 1rem);
+    transition: right 0.4s ease-out;
+}
+
+.Middle:hover + .Date {
+    right: 3.5%;
 }
 
 .experience .Location {
