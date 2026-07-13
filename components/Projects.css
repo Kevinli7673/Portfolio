@@ -89,7 +89,10 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(115deg,
+    /* background-image longhand, not the shorthand: the minifier duplicates the
+       declaration for the oklch()→lab() fallback, and a duplicated shorthand
+       resets background-size/position. */
+    background-image: linear-gradient(115deg,
     oklch(0.955 0.012 82 / 0.94) 0%,
     oklch(0.955 0.012 82 / 0.86) 38%,
     oklch(0.955 0.012 82 / 0.55) 72%,
