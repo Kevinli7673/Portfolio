@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Inika, JetBrains_Mono, Lora, Source_Serif_4 } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import Nav from "@/components/Nav";
 import "./globals.css";
 
@@ -48,6 +49,7 @@ export default function RootLayout({
             <body>
                 <Nav />
                 {children}
+                <Analytics />
             </body>
         </html>
     );
