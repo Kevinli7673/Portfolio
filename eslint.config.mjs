@@ -18,8 +18,6 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // Old Vite app, removed at the end of the Next.js migration.
-    "my-react-app/**",
   ]),
 ]);
 
