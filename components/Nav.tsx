@@ -1,19 +1,20 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import Linkedin from "@/assets/linkedin-logo.svg";
 import Github from "@/assets/github-logo.svg";
 import Resume from "@/assets/resume-logo.svg";
 import "./Nav.css";
+import { useLenis } from "lenis/react";
 
 function Nav() {
-    const pathname = usePathname();
+    const lenis = useLenis();
 
-    const handleHome = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        if (pathname === "/") {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
+    const scrollToId = (e: React.MouseEvent<HTMLAnchorElement>, id?: string) => {
+        e.preventDefault();
+        if (id) {
+            lenis?.scrollTo(`#${id}`);
+        } else {
+            lenis?.scrollTo(0);
         }
     };
 
@@ -21,11 +22,11 @@ function Nav() {
         <>
             <div className="Navbar">
                 <nav className="Nav">
-                    <Link className="name" href="/" onClick={handleHome}>Kevin Li</Link>
+                    <a className="name" href="#" onClick={(e) => scrollToId(e)}>Kevin Li</a>
                     <ul className="mainNav">
-                        <li><Link href="/" onClick={handleHome}>Home</Link></li>
-                        <li><Link href="/experience">Experience</Link></li>
-                        <li><Link href="/#Projects">Projects</Link></li>
+                        <li><a href="#" onClick={(e) => scrollToId(e)}>Home</a></li>
+                        <li><a href="#Experience" onClick={(e) => scrollToId(e, "Experience")}>Experience</a></li>
+                        <li><a href="#Projects" onClick={(e) => scrollToId(e, "Projects")}>Projects</a></li>
                     </ul>
                     <ul className="Links">
                         <li><a href="https://www.linkedin.com/in/kevin-li7673/" target="_blank"><img className="linkedin" src={Linkedin.src} alt="Linkedin logo"/></a></li>

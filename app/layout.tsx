@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Inika, JetBrains_Mono, Lora, Source_Serif_4 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import Nav from "@/components/Nav";
+import LenisProvider from "@/components/LenisProvider";
 import "./globals.css";
 
 const geist = Geist({
@@ -46,10 +47,12 @@ export default function RootLayout({
             lang="en"
             className={`${geist.variable} ${inika.variable} ${jetbrainsMono.variable} ${lora.variable} ${sourceSerif4.variable}`}
         >
-            <body>
-                <Nav />
-                {children}
-                <Analytics />
+            <body suppressHydrationWarning>
+                <LenisProvider>
+                    <Nav />
+                    {children}
+                    <Analytics />
+                </LenisProvider>
             </body>
         </html>
     );

@@ -42,14 +42,13 @@ function ExperienceCard({ image, role, roleClass, company, date, location, summa
 
 function Experience() {
     return (
-        <div className="experience">
+        <div className="experience" id="Experience">
             <div className="Title">
                 <span>Experience</span>
             </div>
             <div className="caption">
                 <p>My Professional Journey: Growth Through Internships and Leadership</p>
             </div>
-            <hr/>
             {experiences.map(experience => (<ExperienceCard key={experience.company} {...experience} />))}
         </div>
     );

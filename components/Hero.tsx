@@ -45,7 +45,6 @@ function Hero() {
                     <p className={`alt-Text ${isFading ? "fade-out" : "fade-in"}`}>{words[index]}</p>
                 </div>
             </div>
-            <hr/>
         </>
     );
 }

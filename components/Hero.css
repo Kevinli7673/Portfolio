@@ -34,6 +34,8 @@
     margin-top: -8%;
     gap: 40px;
     font-size: clamp(1.5rem, calc(1.2vw + .5rem), 3rem);
+    width: 18vw;
+    max-width: 600px;
 }
 
 img {
@@ -53,6 +55,10 @@ img {
 
 .alt-Text {
     transition: opacity 0.8s ease-in-out;
+    text-align: center;
+    line-height: 1.3;
+    min-height: 2.6em;
+    margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -73,6 +79,7 @@ img {
 
     .rightSide {
         margin-top: 2%;
+        width: 40vw;
     }
 
     .leftSide {
