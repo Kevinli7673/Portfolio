@@ -1,4 +1,8 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import { projects, type Project } from "@/data/projects";
+import { gsap } from "@/lib/gsap";
 import "./Projects.css";
 
 function ProjectsCard({ name, role, year, description, tags, image }: Project) {
@@ -24,8 +28,30 @@ function ProjectsCard({ name, role, year, description, tags, image }: Project) {
 }
 
 function Projects() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.utils.toArray<HTMLElement>(".ProjectCard").forEach(card => {
+                gsap.from(card, {
+                    opacity: 0,
+                    y: 40,
+                    scale: 0.96,
+                    duration: 0.7,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                    },
+                });
+            });
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
-        <div className="Project-Section" id="Projects">
+        <div className="Project-Section" id="Projects" ref={sectionRef}>
             <div className="Hover_caption">
                 <span>Hover to preview</span>
             </div>

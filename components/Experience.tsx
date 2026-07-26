@@ -1,5 +1,9 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { experiences, type ExperienceEntry } from "@/data/experience";
+import { gsap } from "@/lib/gsap";
 import "./Experience.css";
 
 function ExperienceCard({ image, role, roleClass, company, date, location, summary, details, tags }: ExperienceEntry) {
@@ -41,8 +45,41 @@ function ExperienceCard({ image, role, roleClass, company, date, location, summa
 }
 
 function Experience() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.from([".Title", ".caption"], {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                ease: "power3.out",
+                stagger: 0.15,
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top 80%",
+                },
+            });
+
+            gsap.utils.toArray<HTMLElement>(".Experience-card").forEach(card => {
+                gsap.from(card, {
+                    opacity: 0,
+                    y: 40,
+                    duration: 0.7,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                    },
+                });
+            });
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
-        <div className="experience" id="Experience">
+        <div className="experience" id="Experience" ref={sectionRef}>
             <div className="Title">
                 <span>Experience</span>
             </div>

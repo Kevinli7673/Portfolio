@@ -1,13 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { gsap } from "@/lib/gsap";
 import "./Hero.css";
 
-const words = ["Hi, I'm Kevin", "Fav games: Souls likes", "CS Major", "Rising Sophmore at UCF"];
+const words = ["Software Engineer", "Fav games: Souls likes", "CS Major", "Rising Sophmore at UCF", "I like noodle"];
 
 function Hero() {
     const [index, setIndex] = useState(0);
     const [isFading, setIsFading] = useState(false);
+    const heroRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -21,9 +23,20 @@ function Hero() {
         return () => clearInterval(interval);
     }, []);
 
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.timeline({ defaults: { ease: "power3.out", duration: 0.8 } })
+                .from(".heroQuote", { opacity: 0, y: 30 })
+                .from(".Caption", { opacity: 0, y: 30 }, "-=0.5")
+                .from(".rightSide", { opacity: 0, y: 30 }, "-=0.5");
+        }, heroRef);
+
+        return () => ctx.revert();
+    }, []);
+
     return (
         <>
-            <div className="Hero">
+            <div className="Hero" ref={heroRef}>
                 <div className="leftSide">
                     <div className="heroQuote">
                         <p>
